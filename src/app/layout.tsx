@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { AdmissionModal } from "@/components/ui/AdmissionModal";
 
 export default function RootLayout({
   children,
@@ -36,6 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AdmissionModal />
           {children}
         </ThemeProvider>
       </body>

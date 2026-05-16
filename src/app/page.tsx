@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import { WelcomeSection } from "@/components/sections/WelcomeSection";
+import { CarTransition } from "@/components/ui/CarTransition";
 import Programs from "@/components/sections/Programs";
 import Strengths from "@/components/sections/Strengths";
 import Partners from "@/components/sections/Partners";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WelcomeSection />
+      <CarTransition reverse={false} />
       <Programs />
       <Strengths />
       <Partners />
