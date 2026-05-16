@@ -1,137 +1,150 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Jigardan Gadhvi",
-    role: "Celebrity Singer",
-    company: "JG Alumnus",
-    avatar: "JG",
-    avatarBg: "#EF4444",
-    text: "As a celebrity singer today, I owe a great deal to JG for shaping me into the person I am. The faculty members were more than just teachers; they served as mentors who supported and guided us at every step. This experience instilled in me the virtues of discipline and hard work.",
-    rating: 5,
-  },
   {
     name: "Yatendra Sinh Joddha",
     role: "Technical Head",
     company: "TATA Consultancy Services",
     avatar: "YJ",
-    avatarBg: "#1e1b4b",
-    text: "My education at JG has played a pivotal role in shaping my career as a Technical Head at TCS. The BCA program provided me with a strong foundation in IT, and the focus on training gave me the opportunity to apply my knowledge in real-world scenarios.",
-    rating: 5,
+    avatarBg: "linear-gradient(135deg, #1e1b4b, #312e81)",
+    text: "My education at JG has played a pivotal role in shaping my career as a Technical Head at TCS. The BCA program provided me with a strong foundation in IT, and the focus on training gave me the opportunity to apply my knowledge in real-world scenarios. The focus on learning and staying up-to-date with computer science have been invaluable in my career."
+  },
+  {
+    name: "Disha Thaker",
+    role: "BCA - Project Associate",
+    company: "Cognizant",
+    avatar: "DT",
+    avatarBg: "linear-gradient(135deg, #0284c7, #0ea5e9)",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150",
+    text: "I am immensely appreciative of the knowledge and experience gained at JG. It provided a solid foundation in computer science and programming languages. The emphasis on practical learning through projects and assignments benefited greatly from the emphasis on practical learning and recent developments in computer science."
+  },
+  {
+    name: "Jigardan Gadhvi",
+    role: "Celebrity Singer",
+    company: "JG Alumnus",
+    avatar: "JG",
+    avatarBg: "linear-gradient(135deg, #dc2626, #f87171)",
+    text: "As a celebrity singer today, I owe a great deal to JG for shaping me into the person I am. The faculty members were more than just teachers; they served as mentors who supported and guided us at every step. This experience instilled in me the virtues of discipline and hard work."
   },
   {
     name: "Parth Raval",
     role: "Successful Media Professional",
     company: "JG Alumnus",
     avatar: "PR",
-    avatarBg: "#4F46E5",
-    text: "I am pleased to state that my career has been significantly shaped by the education I received at JG. The emphasis on practical learning through internships and industry collaborations gave me valuable hands-on experience and helped me become a successful professional.",
-    rating: 5,
-  },
-  {
-    name: "Parth Prajapati",
-    role: "BBA Graduate",
-    company: "Business Professional",
-    avatar: "PP",
-    avatarBg: "#F59E0B",
-    text: "JG was instrumental in helping me achieve my professional goals. The BBA program provided me with a strong foundation in business principles and experiential learning through real-world projects. I am grateful for the prepared me for challenges of the real world.",
-    rating: 5,
-  },
-  {
-    name: "Aayushi Gor",
-    role: "Management Professional",
-    company: "JG Alumnus",
-    avatar: "AG",
-    avatarBg: "#EC4899",
-    text: "It gives me great pleasure to identify myself as a JG alumnus. This university provides us with incredible information and discipline, which helps us achieve in all of our activities. I owe a sincere debt of gratitude for the opportunities to discover my individuality.",
-    rating: 5,
-  },
-  {
-    name: "Stavan Doshi",
-    role: "Business Owner",
-    company: "Entrepreneur",
-    avatar: "SD",
-    avatarBg: "#10B981",
-    text: "I owe my success as a business owner to the education and experiences I gained at JG. The university's strong emphasis on entrepreneurship and innovation inspired me to pursue my dream. The resources and mentorship programs were invaluable.",
-    rating: 5,
+    avatarBg: "linear-gradient(135deg, #4f46e5, #818cf8)",
+    text: "I am pleased to state that my career has been significantly shaped by the education I received at JG. The emphasis on practical learning through internships and industry collaborations gave me valuable hands-on experience and helped me become a successful professional."
   }
 ];
 
 export default function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  const current = testimonials[currentIndex];
+
   return (
-    <section id="testimonials" className="py-24 bg-[#f8faff] relative overflow-hidden">
-      {/* Subtle top & bottom borders */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4F46E5]/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F59E0B]/20 to-transparent" />
+    <section id="testimonials" className="py-32 bg-[#fafcff] relative overflow-hidden">
+      
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#38BDF8]/30 to-transparent" />
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-[100px] animate-pulse" />
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#FDE047]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
 
-      {/* BG blobs */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-[#4F46E5]/5 rounded-full blur-[80px]" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#F59E0B]/5 rounded-full blur-[80px]" />
+      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center md:text-left mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-black text-[#1e1b4b] tracking-tight relative inline-block">
+            JG Alumni Testimonials
+            <div className="absolute -bottom-3 left-0 w-1/3 h-1 bg-[#38BDF8] rounded-full" />
+          </h2>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-[#F59E0B] mb-4 font-mono"
-          >
-            Student Stories
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight font-heading"
-          >
-            Voices That <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#ec4899]">Inspire</span>
-          </motion.h2>
-        </div>
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="relative bg-white rounded-3xl p-7 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100 hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col gap-4"
+        <div className="relative bg-white/60 backdrop-blur-2xl rounded-[2.5rem] p-8 md:p-10 border border-white shadow-[0_20px_80px_-15px_rgba(0,0,0,0.05)]">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+            
+            {/* Giant Quote Icon */}
+            <motion.div 
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="text-[100px] md:text-[140px] leading-none font-serif text-[#FDE047] select-none opacity-90 shrink-0 mt-[-30px] md:mt-[-40px] drop-shadow-xl"
             >
-              {/* Quote icon */}
-              <Quote className="w-8 h-8 text-gray-100 absolute top-6 right-6 group-hover:text-gray-200 transition-colors" />
-
-              {/* Stars */}
-              <div className="flex gap-1">
-                {Array.from({ length: t.rating }).map((_, si) => (
-                  <Star key={si} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
-                ))}
-              </div>
-
-              {/* Quote text */}
-              <p className="text-gray-600 text-sm leading-relaxed flex-1">"{t.text}"</p>
-
-              {/* Person */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-50">
-                <div
-                  className="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
-                  style={{ background: `linear-gradient(135deg, ${t.avatarBg}, ${t.avatarBg}99)` }}
-                >
-                  {t.avatar}
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                  <p className="text-xs text-gray-400">{t.role} · <span style={{ color: t.avatarBg }} className="font-semibold">{t.company}</span></p>
-                </div>
-              </div>
+              “
             </motion.div>
-          ))}
+
+            {/* Testimonial Content */}
+            <div className="flex-1 w-full min-h-[200px] flex flex-col relative pt-2 md:pt-4">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 20, filter: "blur(5px)" }}
+                  animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: -20, filter: "blur(5px)" }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="flex-1"
+                >
+                  <p className="text-gray-700 text-lg md:text-xl leading-[1.7] font-light mb-8 relative z-10">
+                    {current.text}
+                  </p>
+
+                  <div className="flex items-center gap-5 relative z-10">
+                    {current.image ? (
+                      <div className="relative w-16 h-16 rounded-full p-1 bg-white shadow-lg">
+                        <img 
+                          src={current.image} 
+                          alt={current.name} 
+                          className="w-full h-full rounded-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div 
+                        className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg border-[3px] border-white"
+                        style={{ background: current.avatarBg }}
+                      >
+                        {current.avatar}
+                      </div>
+                    )}
+                    <div>
+                      <h4 className="font-bold text-[#1e1b4b] text-lg mb-1">{current.name}</h4>
+                      <p className="text-sm text-gray-500 font-medium">
+                        {current.role}, <span className="text-[#38BDF8] font-bold">{current.company}</span>
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Navigation Buttons */}
+              <div className="flex items-center gap-4 absolute bottom-0 right-0 z-20">
+                <button 
+                  onClick={prev}
+                  className="w-12 h-12 rounded-full bg-white text-[#38BDF8] flex items-center justify-center border-2 border-[#38BDF8] hover:bg-[#38BDF8] hover:text-white transition-all duration-300 shadow-lg hover:shadow-[#38BDF8]/30 hover:-translate-x-1"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button 
+                  onClick={next}
+                  className="w-12 h-12 rounded-full bg-[#38BDF8] text-white flex items-center justify-center border-2 border-[#38BDF8] hover:bg-[#0284C7] hover:border-[#0284C7] transition-all duration-300 shadow-lg hover:shadow-[#38BDF8]/30 hover:translate-x-1"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ const leaders = [
     role: "President, JG University",
     bio: "M.P. Chandran is a postgraduate in management with more than 30 years of experience in senior and board-level positions. He is the Chairperson of the Education Task Force, Gujarat Chamber of Commerce and Industry, and Chairman of ASIA Charitable Trust (ACT).",
     message: "Knowledge is the power that no one can take away from you. The education system today needs to be experiential to help students shape their future.",
-    image: "/mp_chandran.png",
+    image: "/mp_chandran_v2.png",
     stats: ["30+ Years Exp", "Chairman @ ACT", "Edu Task Force Chair"],
     buttonText: "View President's Message"
   },
@@ -19,7 +19,7 @@ const leaders = [
     role: "Director-General & Provost",
     bio: "Dr. CA Achyut Dani has 21+ years of expertise in academics and industry. He holds a doctorate in management and commerce. He has been a fellow member of the Committee for Review of Education and Training (CRET) and a senior mentor at Academic Staff College.",
     message: "JG University aims to bring excellence in everything it does. Our commitment is reflected in the mentorship we provide at every stage.",
-    image: "/ca_achyut_dani.png",
+    image: "/ca_achyut_dani_v2.png",
     stats: ["21+ Years Exp", "PhD in Management", "Multiple Awards"],
     buttonText: "View DG's Message"
   }
@@ -68,21 +68,21 @@ export default function Leaders() {
               transition={{ duration: 0.8, delay: idx * 0.2 }}
               className="relative group h-full"
             >
-              <div className="bg-white rounded-[2.5rem] p-8 md:p-10 border border-gray-100 shadow-xl shadow-gray-200/50 group-hover:shadow-2xl transition-all duration-500 flex flex-col md:flex-row gap-10 h-full overflow-hidden relative">
+              <div className="bg-white rounded-[2.5rem] p-8 md:p-10 border border-gray-100 shadow-xl shadow-gray-200/50 group-hover:shadow-2xl group-hover:shadow-red-500/10 transition-all duration-500 flex flex-col md:flex-row gap-10 h-full overflow-hidden relative group-hover:-translate-y-2">
                 
                 {/* Visual Accent */}
-                <div className={`absolute top-0 left-0 w-2 h-full ${idx === 0 ? 'bg-red-600' : 'bg-indigo-600'}`} />
+                <div className={`absolute top-0 left-0 w-2 h-full transition-all duration-500 group-hover:w-3 ${idx === 0 ? 'bg-gradient-to-b from-red-500 to-red-700' : 'bg-gradient-to-b from-indigo-500 to-indigo-700'}`} />
 
                 {/* Left: Image & Stats */}
                 <div className="w-full md:w-2/5 flex flex-col gap-6">
-                  <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gray-50">
+                  <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gray-50 group-hover:ring-red-100 transition-all duration-500">
                     <Image 
                       src={leader.image} 
                       alt={leader.name}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="object-cover group-hover:scale-125 transition-transform duration-1000 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
                   
                   <div className="space-y-3">

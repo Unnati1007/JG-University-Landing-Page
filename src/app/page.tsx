@@ -9,6 +9,7 @@ import Leaders from "@/components/sections/Leaders";
 import Faculty from "@/components/sections/Faculty";
 import Partners from "@/components/sections/Partners";
 import Testimonials from "@/components/sections/Testimonials";
+import CTA from "@/components/sections/CTA";
 import Footer from "@/components/sections/Footer";
 import { CarTransition } from "@/components/ui/CarTransition";
 
@@ -42,6 +43,9 @@ export default function Home() {
       <CarTransition reverse={true} />
       
       <Testimonials />
+      <CarTransition reverse={false} />
+      
+      <CTA />
       
       <Footer />
     </main>

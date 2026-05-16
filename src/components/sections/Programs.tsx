@@ -198,15 +198,6 @@ export default function Programs() {
                      </div>
                   </motion.div>
 
-                  {/* The Erase Edge (Glowing Vertical Line) */}
-                  <motion.div
-                    variants={{
-                      initial: { left: "-10%" },
-                      hover: { left: "100%" }
-                    }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="absolute inset-y-0 w-24 z-30 pointer-events-none bg-gradient-to-r from-transparent via-white/80 to-transparent"
-                  />
                 </motion.div>
               ))}
             </div>
