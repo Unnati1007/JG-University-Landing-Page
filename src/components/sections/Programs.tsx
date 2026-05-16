@@ -1,49 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { programs } from "@/lib/data";
-import ProgramCard from "@/components/ui/ProgramCard";
 
-const Programs = () => {
+const programTypes = [
+  {
+    title: "Undergraduate",
+    image: "/images/undergraduate.png",
+    color: "bg-[#7c4dff]", // Purple
+    hoverColor: "hover:bg-[#6c3de6]",
+  },
+  {
+    title: "Postgraduate",
+    image: "/images/postgraduate.png",
+    color: "bg-[#e91e63]", // Pink
+    hoverColor: "hover:bg-[#d81b60]",
+  },
+  {
+    title: "Doctoral",
+    image: "/images/doctoral.png",
+    color: "bg-[#b71c1c]", // Dark Red/Maroon
+    hoverColor: "hover:bg-[#a81919]",
+  },
+  {
+    title: "Certificate Courses",
+    image: "/images/certificate.png",
+    color: "bg-[#4fc3f7]", // Light Blue
+    hoverColor: "hover:bg-[#29b6f6]",
+  },
+];
+
+export default function Programs() {
   return (
-    <section id="programs" className="py-24 bg-background relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black mb-6 tracking-tight"
-          >
-            Academic <span className="text-primary">Excellence</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-muted-foreground text-lg"
-          >
-            Discover our diverse range of world-class programs designed to prepare you for the challenges of tomorrow.
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {programs.map((program, index) => (
+    <section className="py-24 bg-white">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-12 text-[#1e1b4b]">Programmes</h2>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {programTypes.map((program, idx) => (
             <motion.div
-              key={program.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              transition={{ delay: idx * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="flex flex-col group cursor-pointer"
             >
-              <ProgramCard {...program} icon={program.icon as any} />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-t-sm">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className={`${program.color} ${program.hoverColor} py-4 px-6 text-center transition-colors duration-300`}>
+                <h3 className="text-white text-xl font-bold tracking-tight">
+                  {program.title}
+                </h3>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Programs;
+}
