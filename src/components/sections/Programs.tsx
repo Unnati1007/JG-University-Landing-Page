@@ -94,7 +94,7 @@ export default function Programs() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-heading font-[900] text-[#1e1b4b] leading-none tracking-tighter"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-red-800 drop-shadow-sm">Programmes</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-red-800 drop-shadow-sm px-4">Programmes</span>
           </motion.h2>
         </div>
 

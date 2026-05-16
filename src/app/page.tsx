@@ -1,13 +1,16 @@
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import { WelcomeSection } from "@/components/sections/WelcomeSection";
-import { CarTransition } from "@/components/ui/CarTransition";
 import Programs from "@/components/sections/Programs";
+import SalientFeatures from "@/components/sections/SalientFeatures";
 import Strengths from "@/components/sections/Strengths";
+import Campus from "@/components/sections/Campus";
+import Leaders from "@/components/sections/Leaders";
+import Faculty from "@/components/sections/Faculty";
 import Partners from "@/components/sections/Partners";
 import Testimonials from "@/components/sections/Testimonials";
-import CTA from "@/components/sections/CTA";
+import Footer from "@/components/sections/Footer";
+import { CarTransition } from "@/components/ui/CarTransition";
 
 export default function Home() {
   return (
@@ -16,12 +19,30 @@ export default function Home() {
       <Hero />
       <WelcomeSection />
       <CarTransition reverse={false} />
+      
       <Programs />
       <CarTransition reverse={true} />
+      
+      <SalientFeatures />
+      <CarTransition reverse={false} />
+      
       <Strengths />
+      <CarTransition reverse={true} />
+      
+      <Campus />
+      <CarTransition reverse={false} />
+      
+      <Leaders />
+      <CarTransition reverse={true} />
+      
+      <Faculty />
+      <CarTransition reverse={false} />
+      
       <Partners />
+      <CarTransition reverse={true} />
+      
       <Testimonials />
-      <CTA />
+      
       <Footer />
     </main>
   );
