@@ -1,184 +1,131 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Globe, GraduationCap, FlaskConical, Users,
-  Trophy, Lightbulb, Building2, Handshake,
+import { 
+  ShieldCheck, 
+  Lightbulb, 
+  Rocket, 
+  Trophy, 
+  Target 
 } from "lucide-react";
 
-const bentoItems = [
+const successPillars = [
   {
-    icon: GraduationCap,
-    title: "Academic Excellence",
-    description: "Ranked among Gujarat's top universities with NAAC accreditation and UGC recognition.",
-    accent: "#4F46E5",
-    size: "lg", // large card — spans 2 rows
-    stat: "A+",
-    statLabel: "NAAC Grade",
+    title: "Interdisciplinary Approach",
+    subtitle: "Connecting Diverse Minds",
+    description: "Students from a wide range of backgrounds connect, ideate and solve problems with different conceptual structures and methods of understanding.",
+    icon: ShieldCheck,
+    color: "bg-[#d9f99d]", // Lime 200
+    textColor: "text-[#365314]",
+    delay: 0.1
   },
   {
-    icon: Handshake,
-    title: "Industry Partnerships",
-    description: "50+ MoUs with industry leaders ensuring real-world exposure and placement support.",
-    accent: "#F59E0B",
-    size: "sm",
-    stat: "50+",
-    statLabel: "MoU Partners",
-  },
-  {
-    icon: Trophy,
-    title: "98% Placements",
-    description: "Near-perfect placement record with top recruiters across India and abroad.",
-    accent: "#10B981",
-    size: "sm",
-    stat: "98%",
-    statLabel: "Placement Rate",
-  },
-  {
-    icon: FlaskConical,
-    title: "Research & Innovation",
-    description: "State-of-the-art labs, incubation centres, and active research programmes.",
-    accent: "#8B5CF6",
-    size: "md",
-    stat: "30+",
-    statLabel: "Research Centres",
-  },
-  {
-    icon: Globe,
-    title: "Global Exposure",
-    description: "Student exchange programmes, international collaborations, and global faculty.",
-    accent: "#0EA5E9",
-    size: "md",
-    stat: "20+",
-    statLabel: "Partner Countries",
-  },
-  {
+    title: "Immersive & Experiential Learning",
+    subtitle: "Hands-on Expertise",
+    description: "Exposure to real-life projects to develop hands-on expertise through practical engagement and industry immersion.",
     icon: Lightbulb,
-    title: "Innovation Hub",
-    description: "A vibrant ecosystem for entrepreneurs, innovators, and change-makers.",
-    accent: "#F43F5E",
-    size: "sm",
-    stat: "5+",
-    statLabel: "Startup Exits",
+    color: "bg-[#bef264]", // Lime 300
+    textColor: "text-[#3f6212]",
+    delay: 0.3
   },
   {
-    icon: Building2,
-    title: "Modern Campus",
-    description: "60+ acre Wi-Fi campus with smart classrooms, hostels, and world-class facilities.",
-    accent: "#d97706",
-    size: "sm",
-    stat: "60+",
-    statLabel: "Acres Campus",
+    title: "Whole Brain Learning Pedagogy",
+    subtitle: "Creative Thinkers",
+    description: "Pedagogy that empower learners to acquire future-proof technical skills and moulds them into creative thinkers for the modern world.",
+    icon: Rocket,
+    color: "bg-[#a3e635]", // Lime 400
+    textColor: "text-[#4d7c0f]",
+    delay: 0.5
   },
   {
-    icon: Users,
-    title: "Expert Faculty",
-    description: "250+ qualified faculty members with PhDs, industry experience, and global exposure.",
-    accent: "#ec4899",
-    size: "sm",
-    stat: "250+",
-    statLabel: "Expert Faculty",
-  },
+    title: "Faculty from Academia & Industry",
+    subtitle: "Brilliant Scholars",
+    description: "Inspiration by dynamic, brilliant scholars with vast academic knowledge and real-world experience across sectors.",
+    icon: Trophy,
+    color: "bg-[#84cc16]", // Lime 500
+    textColor: "text-[#3f6212]",
+    delay: 0.7
+  }
 ];
 
 export default function Strengths() {
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-80 h-80 bg-[#4F46E5]/5 rounded-full blur-[80px]" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#F59E0B]/5 rounded-full blur-[80px]" />
+    <section className="py-16 bg-white relative overflow-hidden">
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-[#4F46E5] mb-4 font-mono"
-          >
-            Why JG University
-          </motion.span>
-          <motion.h2
+        <div className="text-center mb-12">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4 font-heading"
+            className="text-5xl font-black text-[#1e1b4b] tracking-tighter mb-4"
           >
-            Built for the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#8B5CF6]">Leaders</span> of Tomorrow
+            The <span className="text-[#84cc16]">Staircase</span> of Success
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-500 text-lg leading-relaxed"
-          >
-            Discover the strengths that make JG University the preferred destination for ambitious students across Gujarat.
-          </motion.p>
+          <p className="text-gray-500 max-w-2xl mx-auto font-medium">
+            From a solid academic foundation to global leadership, our core strengths empower your journey every step of the way.
+          </p>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[160px] gap-4">
-
-          {/* Large card — Academic Excellence */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-2 lg:row-span-2 relative rounded-3xl overflow-hidden group cursor-default"
-            style={{ background: `linear-gradient(135deg, ${bentoItems[0].accent}08, ${bentoItems[0].accent}15)`, border: `1px solid ${bentoItems[0].accent}20` }}
-          >
-            <div className="absolute top-6 right-6 w-24 h-24 rounded-full opacity-10 blur-2xl" style={{ background: bentoItems[0].accent }} />
-            <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full opacity-5" style={{ background: bentoItems[0].accent }} />
-            <div className="p-8 h-full flex flex-col justify-between relative z-10">
-              <div>
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg" style={{ background: `${bentoItems[0].accent}20` }}>
-                  <GraduationCap className="w-8 h-8" style={{ color: bentoItems[0].accent }} />
-                </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-3 font-heading">{bentoItems[0].title}</h3>
-                <p className="text-gray-500 leading-relaxed text-base">{bentoItems[0].description}</p>
-              </div>
-              <div className="flex items-end gap-3">
-                <span className="text-6xl font-black font-heading" style={{ color: bentoItems[0].accent }}>{bentoItems[0].stat}</span>
-                <span className="text-sm font-mono uppercase tracking-widest text-gray-400 pb-3">{bentoItems[0].statLabel}</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Remaining cards */}
-          {bentoItems.slice(1).map((item, i) => (
+        {/* Staircase Container */}
+        <div className="relative min-h-[600px] flex flex-col items-start lg:flex-row lg:items-end justify-between gap-4 lg:gap-0">
+          {successPillars.map((pillar, idx) => (
             <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={idx}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: (i + 1) * 0.07 }}
-              className="relative rounded-3xl overflow-hidden group cursor-default"
-              style={{
-                background: `linear-gradient(135deg, ${item.accent}06, ${item.accent}12)`,
-                border: `1px solid ${item.accent}18`
-              }}
+              transition={{ delay: pillar.delay, duration: 0.6 }}
+              className="relative w-full lg:w-[20%] group"
             >
-              <div className="p-6 h-full flex flex-col justify-between relative z-10">
-                <div>
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3 shadow-sm" style={{ background: `${item.accent}20` }}>
-                    <item.icon className="w-5 h-5" style={{ color: item.accent }} />
-                  </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-1 font-heading">{item.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">{item.description}</p>
-                </div>
-                <div className="flex items-baseline gap-1.5 mt-2">
-                  <span className="text-2xl font-black font-heading" style={{ color: item.accent }}>{item.stat}</span>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">{item.statLabel}</span>
-                </div>
+              {/* Step Info (Top) */}
+              <div className="mb-8 lg:absolute lg:bottom-full lg:left-0 lg:mb-12 w-full lg:w-[250px] transition-transform duration-300 group-hover:-translate-y-2">
+                 <div className="flex items-center gap-3 mb-2">
+                    <div className={`p-2 rounded-lg ${pillar.color} ${pillar.textColor}`}>
+                       <pillar.icon size={20} />
+                    </div>
+                    <span className={`text-sm font-black uppercase tracking-widest ${pillar.textColor}`}>
+                      {pillar.title}
+                    </span>
+                 </div>
+                 <h4 className="text-xl font-bold text-[#1e1b4b] mb-2">{pillar.subtitle}</h4>
+                 <p className="text-gray-500 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   {pillar.description}
+                 </p>
               </div>
-              {/* Hover accent dot */}
-              <div className="absolute bottom-3 right-3 w-6 h-6 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300" style={{ background: item.accent }} />
+
+              {/* Step Visual (The Stair) */}
+              <div 
+                className={`w-full h-16 lg:h-32 ${pillar.color} rounded-t-xl lg:rounded-t-none border-t-4 border-white/20 shadow-lg relative overflow-hidden`}
+                style={{ height: `${(idx + 1) * 60 + 40}px` }}
+              >
+                {/* Silhouette Effect on Hover */}
+                <motion.div 
+                  initial={{ opacity: 0.2, scale: 0.9 }}
+                  whileHover={{ opacity: 1, scale: 1.1 }}
+                  className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                >
+                   <pillar.icon size={80} className={`${pillar.textColor} opacity-20`} />
+                </motion.div>
+                
+                {/* Subtle Shine */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
+              </div>
+
+              {/* Vertical Connector (Mobile only) */}
+              {idx < successPillars.length - 1 && (
+                <div className="lg:hidden w-1 h-8 bg-gray-100 mx-auto" />
+              )}
             </motion.div>
           ))}
+          
+          {/* Legend */}
+          <div className="hidden lg:block absolute bottom-0 right-0 p-8 text-right">
+             <h5 className="text-4xl font-black text-[#1e1b4b]/10 uppercase tracking-widest leading-none">
+               Progressive<br />Growth
+             </h5>
+          </div>
         </div>
       </div>
     </section>

@@ -17,6 +17,7 @@ export default function Home() {
       <WelcomeSection />
       <CarTransition reverse={false} />
       <Programs />
+      <CarTransition reverse={true} />
       <Strengths />
       <Partners />
       <Testimonials />
