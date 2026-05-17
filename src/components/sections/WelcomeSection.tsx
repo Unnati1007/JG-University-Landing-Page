@@ -9,9 +9,9 @@ export function WelcomeSection() {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="pt-12 pb-6 md:pt-16 md:pb-8 bg-white overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:items-start items-center">
           
           {/* Left Content */}
           <motion.div
@@ -57,10 +57,10 @@ export function WelcomeSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative p-8 rounded-[3rem] bg-gray-50/50 border border-gray-200 shadow-inner group"
+            className="relative p-4 md:p-8 rounded-[2rem] md:rounded-[3rem] bg-gray-50/50 border border-gray-200 shadow-inner group"
           >
 
-            <div className="grid grid-cols-1 gap-12">
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
               {videos.map((video, idx) => (
                 <motion.div
                   key={idx}
@@ -92,14 +92,14 @@ export function WelcomeSection() {
                     boxShadow: "0 40px 80px -20px rgba(0,0,0,0.25)"
                   }}
                   viewport={{ once: true }}
-                  className="relative p-5 pb-14 bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-gray-100 cursor-pointer group transition-shadow"
+                  className="relative p-2 pb-7 md:p-4 md:pb-10 bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-gray-100 cursor-pointer group transition-shadow"
                 >
                   {/* Glass Shine Effect on Hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none overflow-hidden rounded-xl">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   </div>
 
-                  <div className="relative aspect-video rounded-sm overflow-hidden bg-black ring-1 ring-gray-900/10 shadow-inner">
+                  <div className="relative aspect-video max-h-[180px] md:max-h-none rounded-sm overflow-hidden bg-black ring-1 ring-gray-900/10 shadow-inner">
                     <iframe
                       className="w-full h-full"
                       src={`https://www.youtube.com/embed/${video.id}`}

@@ -12,6 +12,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/sections/Footer";
 import { CarTransition } from "@/components/ui/CarTransition";
+import { FloatingActions } from "@/components/ui/FloatingActions";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       <CTA />
       
       <Footer />
+      <FloatingActions />
     </main>
   );
 }

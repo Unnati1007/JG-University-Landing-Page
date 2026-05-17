@@ -52,8 +52,8 @@ export function HeroRightSide({ images = DEFAULT_IMAGES }: HeroRightSideProps) {
 
   return (
     <>
-      {/* Right Side Container – Compact height to reduce space */}
-      <div className="lg:col-span-7 relative h-[800px] lg:h-[1000px] w-full hidden lg:flex items-start justify-end overflow-visible">
+      {/* Right Side Container – Responsive height and visible on all screens */}
+      <div className="lg:col-span-7 relative h-[350px] sm:h-[500px] md:h-[600px] lg:h-[1000px] w-full flex items-center justify-center lg:items-start lg:justify-end overflow-visible mt-12 lg:mt-0">
       <div className="relative h-full w-full overflow-visible">
         {/* Glow Orbs – Even larger and more vibrant */}
         <div
@@ -95,9 +95,10 @@ export function HeroRightSide({ images = DEFAULT_IMAGES }: HeroRightSideProps) {
 
         {/* SVG Canvas – Focused Colossal Scale */}
         <svg
-          viewBox="-1500 -1500 12000 9000"
+          viewBox="-500 -1500 13000 9000"
           width="100%"
           height="100%"
+          preserveAspectRatio="xMaxYMid meet"
           style={{ position: "absolute", inset: 0, overflow: "visible" }}
         >
           <defs>

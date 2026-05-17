@@ -181,49 +181,49 @@ export default function Hero() {
               }
             `}</style>
 
-            {/* Apply Now - Ultra Red 3D */}
+            {/* Apply Now - Formal Navy Blue */}
             <motion.button
               whileHover={{ scale: 1.05, y: -4, rotateX: 5, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto shimmer-btn px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#ef4444] to-[#b91c1c] text-white font-black uppercase tracking-[0.15em] flex items-center justify-center gap-3 shadow-[0_20px_40px_-10px_rgba(239,68,68,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(239,68,68,0.7)] transition-all border-b-[4px] md:border-b-[6px] border-[#991b1b] relative group"
+              className="w-full sm:w-auto shimmer-btn px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-[#1e1b4b] hover:bg-[#0f172a] text-white font-black uppercase tracking-[0.15em] flex items-center justify-center gap-3 shadow-[0_15px_30px_-10px_rgba(30,27,75,0.4)] transition-all border-b-[4px] md:border-b-[6px] border-[#020617] relative group"
             >
               <span className="text-base md:text-lg">Apply Now</span>
               <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
             </motion.button>
 
-            {/* Free Psychometric Test - Golden Amber Premium */}
+            {/* Free Psychometric Test - Classic Crimson Red */}
             <motion.button
               whileHover={{ scale: 1.05, y: -4, rotateY: -5, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto shimmer-btn px-5 py-4 md:px-7 md:py-5 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#F59E0B] to-[#d97706] text-white font-bold flex items-center justify-center gap-3 md:gap-4 shadow-[0_20px_40px_-10px_rgba(245,158,11,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(245,158,11,0.7)] transition-all border-b-[4px] md:border-b-[6px] border-[#b45309] group"
+              className="w-full sm:w-auto shimmer-btn px-5 py-4 md:px-7 md:py-5 rounded-xl md:rounded-2xl bg-[#c0392b] hover:bg-[#922b21] text-white font-bold flex items-center justify-center gap-3 md:gap-4 shadow-[0_15px_30px_-10px_rgba(192,57,43,0.4)] transition-all border-b-[4px] md:border-b-[6px] border-[#7b241c] group"
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-inner shrink-0">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-inner shrink-0">
                 <Brain className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div className="flex flex-col items-start text-left">
-                <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-black">Free Access</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-90 font-black">Free Access</span>
                 <span className="text-sm md:text-base">Psychometric Test</span>
               </div>
             </motion.button>
 
-            {/* Enquire Now - Deep Indigo Glass */}
+            {/* Enquire Now - Clean Minimalist White */}
             <motion.button
               whileHover={{ scale: 1.05, y: -4, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto shimmer-btn px-5 py-4 md:px-8 md:py-5 rounded-xl md:rounded-2xl bg-[#1e1b4b] text-white font-bold flex items-center justify-center gap-3 md:gap-4 shadow-[0_20px_40px_-10px_rgba(30,27,75,0.6)] hover:shadow-[0_25px_50px_-12px_rgba(30,27,75,0.8)] transition-all border-l border-t border-white/20 border-b-[4px] md:border-b-[6px] border-indigo-950 group"
+              className="w-full sm:w-auto px-5 py-4 md:px-8 md:py-5 rounded-xl md:rounded-2xl bg-white text-[#1e1b4b] font-bold flex items-center justify-center gap-3 md:gap-4 transition-all border-2 border-[#1e1b4b] hover:bg-[#1e1b4b] hover:text-white group shadow-md"
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-indigo-500/30 backdrop-blur-sm flex items-center justify-center border border-indigo-400/30 shrink-0">
-                <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-indigo-200 group-hover:rotate-[-10deg] transition-transform" />
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-[#1e1b4b]/10 group-hover:bg-white/20 flex items-center justify-center border border-[#1e1b4b]/30 shrink-0 transition-colors">
+                <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-[#1e1b4b] group-hover:text-white group-hover:rotate-[-10deg] transition-all" />
               </div>
               <div className="flex flex-col items-start text-left">
-                <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-black">Quick Help</span>
-                <span className="text-sm md:text-base">Enquire Now</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-widest text-[#1e1b4b]/60 group-hover:text-white/70 font-black transition-colors">Quick Help</span>
+                <span className="text-sm md:text-base text-[#1e1b4b] group-hover:text-white font-bold transition-colors">Enquire Now</span>
               </div>
             </motion.button>
           </motion.div>
         </div>
 
-        <div className="lg:col-span-7 relative h-full">
+        <div className="lg:col-span-7 relative w-full h-[350px] sm:h-[500px] md:h-[600px] lg:h-full mt-12 lg:mt-0">
           <HeroRightSide />
         </div>
 

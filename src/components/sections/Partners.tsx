@@ -22,12 +22,12 @@ const doubled = [...partners, ...partners];
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-20 bg-white border-y border-gray-100 overflow-hidden relative">
+    <section id="partners" className="pt-12 pb-8 md:pt-16 md:pb-10 bg-white border-y border-gray-100 overflow-hidden relative">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 mb-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 mb-8 relative z-10">
         <div className="text-center">
           <motion.span
             initial={{ opacity: 0 }}

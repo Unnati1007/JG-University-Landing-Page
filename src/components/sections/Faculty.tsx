@@ -44,7 +44,7 @@ const facultyMembers = [
 
 export default function Faculty() {
   return (
-    <section className="py-24 bg-[#f8faff] relative overflow-hidden">
+    <section className="pt-16 pb-8 md:pt-20 md:pb-12 bg-[#f8faff] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Header */}

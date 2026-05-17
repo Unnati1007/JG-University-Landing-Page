@@ -30,13 +30,13 @@ export function AdmissionModal() {
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           />
 
-          {/* Modal Container */}
+          {/* Modal Container with Flying Animation and Border */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0, y: 50 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.8, opacity: 0, y: 50 }}
-            transition={{ type: "spring", damping: 20, stiffness: 200 }}
-            className="relative w-full max-w-md bg-white/90 backdrop-blur-3xl rounded-[3rem] p-1 border border-white shadow-[0_40px_100px_-20px_rgba(30,27,75,0.15)] overflow-hidden"
+            initial={{ opacity: 0, y: 150, scale: 0.5, rotateX: 20 }}
+            animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            exit={{ opacity: 0, y: 50, scale: 0.8, rotateX: -10 }}
+            transition={{ type: "spring", damping: 22, stiffness: 150 }}
+            className="relative w-full max-w-md bg-white rounded-[2.5rem] p-1 border-[6px] border-[#1e1b4b] shadow-[0_40px_100px_-20px_rgba(30,27,75,0.4)] overflow-hidden"
           >
             {/* Animated Binary Rain Background (Subtle) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex justify-around font-mono text-xs overflow-hidden">
@@ -57,35 +57,39 @@ export function AdmissionModal() {
             {/* Close Button */}
             <button 
               onClick={closeModal}
-              className="absolute top-6 right-6 z-50 w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-red-50 text-gray-400 hover:text-red-600 rounded-full transition-all border border-gray-200 group"
+              className="absolute top-5 right-5 z-50 w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-red-50 text-gray-500 hover:text-red-600 rounded-full transition-all border-2 border-gray-200 group"
             >
               <X size={20} className="group-hover:rotate-90 transition-transform duration-300" />
             </button>
             
             {/* Top Branding Section */}
-            <div className="pt-12 pb-6 text-center relative z-10">
+            <div className="pt-10 pb-6 text-center relative z-10">
               <motion.div
-                animate={{ scale: [1, 1.05, 1] }}
+                animate={{ scale: [1, 1.05, 1], y: [0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <img 
                   src="https://jguni.in/images/logo-animation.svg" 
                   alt="JG University Brain Logo" 
-                  className="w-28 h-28 mx-auto object-contain transition-transform hover:scale-110"
+                  className="w-32 h-32 mx-auto object-contain transition-transform hover:scale-110 mix-blend-multiply"
                 />
               </motion.div>
-              <div className="mt-3 text-sm font-black text-[#1e1b4b] uppercase tracking-[0.2em]">
+              <div className="mt-4 text-lg font-black text-indigo-950 uppercase tracking-[0.25em]">
                 JG University
               </div>
             </div>
 
             {/* Content Body */}
-            <div className="px-10 pb-12 text-center relative z-10">
-              <div className="inline-block px-5 py-1.5 bg-red-600 text-white rounded-full text-[11px] font-black uppercase tracking-widest mb-8 shadow-lg shadow-red-600/20">
+            <div className="px-10 pb-10 text-center relative z-10">
+              <motion.div 
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="inline-block px-5 py-2 bg-gradient-to-r from-[#ef4444] to-[#b91c1c] text-white rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-lg shadow-red-600/30 border border-red-500"
+              >
                 Admissions Open
-              </div>
+              </motion.div>
               
-              <h2 className="text-6xl font-black text-[#1e1b4b] mb-4 tracking-tighter leading-none italic">
+              <h2 className="text-6xl font-black mb-4 tracking-tighter leading-none italic bg-clip-text text-transparent bg-gradient-to-br from-[#1e1b4b] to-[#c0392b]">
                 2026-27
               </h2>
               
@@ -95,9 +99,9 @@ export function AdmissionModal() {
 
               {/* Sleek Action Button */}
               <motion.button
-                whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -10px rgba(192,57,43,0.3)" }}
+                whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -10px rgba(192,57,43,0.4)" }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-5 bg-[#c0392b] text-white rounded-2xl text-xl font-black tracking-widest transition-all group relative overflow-hidden"
+                className="w-full py-5 bg-[#1e1b4b] hover:bg-[#0f172a] text-white rounded-2xl text-xl font-black tracking-widest transition-all group relative overflow-hidden border-b-4 border-[#020617]"
               >
                 <span className="relative z-10 flex items-center justify-center gap-3">
                   APPLY NOW
@@ -105,11 +109,11 @@ export function AdmissionModal() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </motion.button>
               
-              <div className="mt-8 pt-6 border-t border-gray-100">
-                <p className="text-[9px] font-bold text-gray-300 uppercase tracking-[0.3em]">
+              <div className="mt-8 pt-5 border-t-2 border-gray-100">
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">
                   UGC Approved // ASIA Charitable Trust
                 </p>
               </div>

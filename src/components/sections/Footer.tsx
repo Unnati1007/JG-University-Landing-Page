@@ -143,11 +143,8 @@ export default function Footer() {
           </div>
           
           <div className="text-right">
-            <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">
+            <p className="text-[10px] font-black uppercase tracking-widest text-gray-500">
               Copyright ©2022 JG University All Rights Reserved
-            </p>
-            <p className="text-[10px] font-black uppercase tracking-widest text-red-600">
-              Powered by: N2N Solutions
             </p>
           </div>
         </div>
