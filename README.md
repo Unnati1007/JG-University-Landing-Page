@@ -52,7 +52,7 @@ To run this project on your local machine, follow these steps:
 
 ## 👨‍💻 Author
 
-Developed and redesigned by **Unnati**.
+Developed and redesigned by **Unnati Jadon**.
 
 ---
 *Submitted for the CodingJr Frontend Developer Task.*
