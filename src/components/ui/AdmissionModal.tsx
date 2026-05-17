@@ -63,19 +63,19 @@ export function AdmissionModal() {
             </button>
             
             {/* Top Branding Section */}
-            <div className="pt-12 pb-8 text-center relative z-10">
+            <div className="pt-12 pb-6 text-center relative z-10">
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <img 
-                  src="https://jguni.in/images/jg-logo.svg" 
-                  alt="JG University" 
-                  className="h-14 mx-auto mb-2"
+                  src="https://jguni.in/images/logo-animation.svg" 
+                  alt="JG University Brain Logo" 
+                  className="w-28 h-28 mx-auto object-contain transition-transform hover:scale-110"
                 />
               </motion.div>
-              <div className="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-4">
-                Excellence By Choice
+              <div className="mt-3 text-sm font-black text-[#1e1b4b] uppercase tracking-[0.2em]">
+                JG University
               </div>
             </div>
 

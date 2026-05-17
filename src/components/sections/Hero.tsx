@@ -80,12 +80,12 @@ export default function Hero() {
       <div className="max-w-[1400px] mr-auto px-6 lg:px-12 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         {/* Left Side (50% approx) */}
-        <div className="lg:col-span-5 pt-0 lg:pt-0">
+        <div className="lg:col-span-5 pt-32 lg:pt-0">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-[#F59E0B]/30 text-[#F59E0B] font-mono text-xs md:text-sm mb-6 uppercase tracking-wider relative overflow-hidden"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border-[#F59E0B]/30 text-[#F59E0B] font-mono text-[10px] md:text-sm mb-6 uppercase tracking-wider relative overflow-hidden"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F59E0B] opacity-75"></span>
@@ -94,12 +94,12 @@ export default function Hero() {
             Top Ranked Institution
           </motion.div>
 
-          <h1 className="font-heading font-black leading-[0.95] mb-8 flex flex-col uppercase">
+          <h1 className="font-heading font-black leading-[1.05] mb-6 flex flex-col uppercase">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[45px] tracking-tight text-textPrimary"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-[45px] tracking-tight text-textPrimary"
             >
               WELCOME TO
             </motion.div>
@@ -108,7 +108,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-[65px] tracking-tighter mt-1 mb-4 flex flex-col sm:flex-row gap-2 sm:gap-6"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-[65px] tracking-tighter mt-1 mb-3 flex flex-col sm:flex-row gap-0 sm:gap-4"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#ef4444] to-[#7f1d1d]">
                 JG
@@ -122,18 +122,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] normal-case tracking-tight text-textPrimary leading-[1.05]"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-[40px] normal-case tracking-tight text-textPrimary leading-tight"
             >
               The Best University in Ahmedabad
             </motion.div>
           </h1>
 
-
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-base md:text-lg text-textSecondary leading-relaxed mb-6 max-w-lg font-body"
+            className="text-sm md:text-lg text-textSecondary leading-relaxed mb-8 max-w-lg font-body"
           >
             A New Age Tech-Driven University offering future-ready programs in Management, Computing, Law, Engineering &amp; Sciences.
           </motion.p>
@@ -143,7 +142,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-wrap gap-5 pt-4 border-t border-indigo-500/10 relative"
+            className="flex flex-col sm:flex-row flex-wrap gap-4 pt-6 border-t border-indigo-500/10 relative"
           >
             {/* Professional Mascot 2 (Tech Professional) */}
             <div className="absolute -bottom-8 -right-12 pointer-events-none hidden md:block" style={{ animation: "charFloat2 4s infinite" }}>
@@ -186,24 +185,24 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05, y: -4, rotateX: 5, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="shimmer-btn px-10 py-5 rounded-2xl bg-gradient-to-br from-[#ef4444] to-[#b91c1c] text-white font-black uppercase tracking-[0.15em] flex items-center gap-3 shadow-[0_20px_40px_-10px_rgba(239,68,68,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(239,68,68,0.7)] transition-all border-b-[6px] border-[#991b1b] relative group"
+              className="w-full sm:w-auto shimmer-btn px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#ef4444] to-[#b91c1c] text-white font-black uppercase tracking-[0.15em] flex items-center justify-center gap-3 shadow-[0_20px_40px_-10px_rgba(239,68,68,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(239,68,68,0.7)] transition-all border-b-[4px] md:border-b-[6px] border-[#991b1b] relative group"
             >
-              <span className="text-lg">Apply Now</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
+              <span className="text-base md:text-lg">Apply Now</span>
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
             </motion.button>
 
             {/* Free Psychometric Test - Golden Amber Premium */}
             <motion.button
               whileHover={{ scale: 1.05, y: -4, rotateY: -5, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="shimmer-btn px-7 py-5 rounded-2xl bg-gradient-to-br from-[#F59E0B] to-[#d97706] text-white font-bold flex items-center gap-4 shadow-[0_20px_40px_-10px_rgba(245,158,11,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(245,158,11,0.7)] transition-all border-b-[6px] border-[#b45309] group"
+              className="w-full sm:w-auto shimmer-btn px-5 py-4 md:px-7 md:py-5 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#F59E0B] to-[#d97706] text-white font-bold flex items-center justify-center gap-3 md:gap-4 shadow-[0_20px_40px_-10px_rgba(245,158,11,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(245,158,11,0.7)] transition-all border-b-[4px] md:border-b-[6px] border-[#b45309] group"
             >
-              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-inner">
-                <Brain className="w-6 h-6 text-white group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-inner shrink-0">
+                <Brain className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <div className="flex flex-col items-start">
-                <span className="text-xs uppercase tracking-widest opacity-80 font-black">Free Access</span>
-                <span className="text-base">Psychometric Test</span>
+              <div className="flex flex-col items-start text-left">
+                <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-black">Free Access</span>
+                <span className="text-sm md:text-base">Psychometric Test</span>
               </div>
             </motion.button>
 
@@ -211,14 +210,14 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05, y: -4, perspective: 1000 }}
               whileTap={{ scale: 0.98 }}
-              className="shimmer-btn px-8 py-5 rounded-2xl bg-[#1e1b4b] text-white font-bold flex items-center gap-4 shadow-[0_20px_40px_-10px_rgba(30,27,75,0.6)] hover:shadow-[0_25px_50px_-12px_rgba(30,27,75,0.8)] transition-all border-l border-t border-white/20 border-b-[6px] border-indigo-950 group"
+              className="w-full sm:w-auto shimmer-btn px-5 py-4 md:px-8 md:py-5 rounded-xl md:rounded-2xl bg-[#1e1b4b] text-white font-bold flex items-center justify-center gap-3 md:gap-4 shadow-[0_20px_40px_-10px_rgba(30,27,75,0.6)] hover:shadow-[0_25px_50px_-12px_rgba(30,27,75,0.8)] transition-all border-l border-t border-white/20 border-b-[4px] md:border-b-[6px] border-indigo-950 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/30 backdrop-blur-sm flex items-center justify-center border border-indigo-400/30">
-                <MessageSquare className="w-6 h-6 text-indigo-200 group-hover:rotate-[-10deg] transition-transform" />
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-indigo-500/30 backdrop-blur-sm flex items-center justify-center border border-indigo-400/30 shrink-0">
+                <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-indigo-200 group-hover:rotate-[-10deg] transition-transform" />
               </div>
-              <div className="flex flex-col items-start">
-                <span className="text-xs uppercase tracking-widest opacity-80 font-black">Quick Help</span>
-                <span className="text-base">Enquire Now</span>
+              <div className="flex flex-col items-start text-left">
+                <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-black">Quick Help</span>
+                <span className="text-sm md:text-base">Enquire Now</span>
               </div>
             </motion.button>
           </motion.div>
