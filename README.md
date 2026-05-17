@@ -115,13 +115,3 @@ To run this project on your local development environment:
 4. **View the application**
    Open [http://localhost:3000](http://localhost:3000) in your web browser.
 
----
-
-## 👨‍💻 Submission Details
-
-- **Candidate Name:** Unnati Jadon
-- **Submission Date:** 17 May, 2026
-- **Submitted To:** Vikas (`vikas@codingjr.online`)
-
----
-*Developed with dedication for the Coding Jr Frontend Web Developer Internship Assignment.*
