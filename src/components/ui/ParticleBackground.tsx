@@ -43,24 +43,24 @@ export const ParticleBackground = () => {
           },
           modes: {
             grab: {
-              distance: 180,
+              distance: 160,
               links: {
-                opacity: 0.8,
-                color: "#4F46E5"
+                opacity: 0.35,
+                color: "#6366f1"
               },
             },
           },
         },
         particles: {
           color: {
-            value: "#4F46E5", /* Primary Indigo */
+            value: "#6366f1", /* Soft Indigo */
           },
           links: {
-            color: "#4F46E5", /* Primary Indigo */
-            distance: 160,
+            color: "#6366f1",
+            distance: 150,
             enable: true,
-            opacity: 0.6,
-            width: 1.5,
+            opacity: 0.15,
+            width: 1,
           },
           move: {
             direction: "none",
@@ -69,23 +69,23 @@ export const ParticleBackground = () => {
               default: "out",
             },
             random: true,
-            speed: 0.8,
+            speed: 0.4, /* Calmer drift speed */
             straight: false,
           },
           number: {
             density: {
               enable: true,
             },
-            value: 120, /* Increased density */
+            value: 45, /* Reduced density for clean UX */
           },
           opacity: {
-            value: 0.8, /* Increased opacity */
+            value: 0.25, /* Much softer and lighter */
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 4 }, /* Increased size */
+            value: { min: 1, max: 2.5 }, /* Smaller subtle dots */
           },
         },
         detectRetina: true,
