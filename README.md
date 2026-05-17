@@ -6,6 +6,10 @@ A modern, highly interactive, and visually stunning landing page for JG Universi
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-f05597?logo=framer)
 
+## 🌐 Live Demo
+
+**View the live site here:** [https://jg-university-landing-page-uj.vercel.app/](https://jg-university-landing-page-uj.vercel.app/)
+
 ## 🚀 Overview
 
 This project is a complete redesign of the [JG University](https://jguni.in/) landing page. The primary goal was to enhance the UI/UX, modernize the visual aesthetic, and introduce highly engaging, fluid animations to create a premium experience for prospective students.
